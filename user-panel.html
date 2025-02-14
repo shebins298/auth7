@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Panel - Accommodation Center Data Entry</title>
+  <link rel="stylesheet" href="stylescontrolpanel.css"> <!-- External stylesheet -->
+  
+  <!-- Firebase libraries -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js"></script>
+
+  <script src="user-panel.js"></script>
+ 
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      text-align: center;
+    }
+    form {
+      max-width: 400px;
+      margin: auto;
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    label, select, input {
+      display: block;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+    button {
+      padding: 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    .logout {
+      margin-top: 20px;
+      padding: 8px 12px;
+      background: red;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Accommodation Center Data Entry</h1>
+  <form id="centerForm">
+    <label for="school">Select School:</label>
+    <select id="school" name="school" required>
+      <option value="">--Select School--</option>
+      <option value="SH HSS">SH HSS</option>
+      <option value="PANANGAD VHSS">PANANGAD VHSS</option>
+      <option value="SN HSS">SN HSS</option>
+      <option value="HSS OF JESUS">HSS OF JESUS</option>
+    </select>
+
+    <label for="studentCount">Number of Students:</label>
+    <input type="number" id="studentCount" name="studentCount" min="1" required>
+
+    <label>
+      <input type="checkbox" id="arrival" name="arrival">
+      All students have reached school
+    </label>
+
+    <label>
+      <input type="checkbox" id="departure" name="departure">
+      All students have left the accommodation center and the center is closed
+    </label>
+
+    <button type="submit">Submit Data</button>
+  </form>
+
+  <button id="logout" class="logout">Logout</button>
+  
+ 
+  
+  <script src="center.js"></script>
+</body>
+</html>

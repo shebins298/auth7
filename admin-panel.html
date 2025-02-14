@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+  
+  <style>
+    h1, h2 { color: #444; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    table th, table td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    .pending-list {
+      padding: 15px;
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .pending-list ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .pending-list li {
+      padding: 5px 0;
+      border-bottom: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Admin Panel</h1>
+    <p id="admin-email"></p>
+    <button id="logout">Logout</button>
+    
+    <h2>Latest Entries</h2>
+    <table id="latestTable">
+      <thead>
+        <tr>
+          <th>School</th>
+          <th>Student Count</th>
+          <th>Arrived</th>
+          <th>Departure</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Latest data rows will be injected here -->
+      </tbody>
+    </table>
+
+    <h2>Pending Entries</h2>
+    <div class="pending-list">
+      <ul id="pendingList">
+        <!-- Pending schools will be injected here -->
+      </ul>
+    </div>
+  </div>
+
+  <!-- Firebase Config and Authentication -->
+  <script src="firebase-config.js"></script>
+  <script src="admin-panel.js"></script>
+  <script src="list.js"></script>
+</body>
+</html>

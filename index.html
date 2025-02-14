@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <button id="google-login">Sign in with Google</button>
+    </div>
+
+    <!-- ✅ Firebase SDK (must be loaded first) -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+
+    <!-- ✅ Firebase Config (must be after Firebase SDK) -->
+    <script src="firebase-config.js"></script>
+
+    <!-- ✅ Main Script (must be after firebase-config.js) -->
+    <script src="script.js"></script>
+</body>
+</html>

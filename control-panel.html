@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Panel</title>
+    <link rel="stylesheet" href="stylescontrolpanel.css">
+</head>
+<body>
+    
+ <h1>Welcome to the Control Panel</h1>
+
+    <div class="button-container">
+        <button id="user-panel-btn" style="display: none;" onclick="window.location.href='user-panel.html'">User Panel</button>
+        <button id="admin-panel-btn" style="display: none;" onclick="window.location.href='admin-panel.html'">Admin Panel</button>
+        <button id="logout">Logout</button>
+    </div>
+
+
+    <!-- ✅ Firebase SDK Scripts (MUST come before firebase-config.js) -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+
+    <!-- ✅ Firebase Configuration (AFTER SDKs are loaded) -->
+    <script src="firebase-config.js"></script>
+
+    <!-- ✅ Control Panel Logic (LAST) -->
+    <script src="control-panel.js"></script>
+</body>
+</html>
